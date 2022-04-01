@@ -28,9 +28,9 @@ We will hash the user's password using `bcryptjs`, and use JSON Web Tokens and t
 
 Your finished project must include all of the following requirements (further instructions are found inside each file):
 
-- [ ] An authentication workflow with functionality for account creation and login, implemented inside `api/auth/auth-router.js`.
-- [ ] Middleware used to restrict access to resources from non-authenticated requests, implemented inside `api/middleware/restricted.js`.
-- [ ] A minimum of 2 tests per API endpoint, written inside `api/server.test.js`.
+- [x] An authentication workflow with functionality for account creation and login, implemented inside `api/auth/auth-router.js`.
+- [x] Middleware used to restrict access to resources from non-authenticated requests, implemented inside `api/middleware/restricted.js`.
+- [x] A minimum of 2 tests per API endpoint, written inside `api/server.test.js`.
 
 **IMPORTANT Notes:**
 
@@ -54,6 +54,10 @@ Your finished project must include all of the following requirements (further in
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+    Sessions use cookies for data transfer between server and client, where JWTs are JSON objects that can travel through REST endpoints normally.
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
+    Bcryptjs hashes passwords multiple times and adds salt using a special algorithm, making it extremely difficulkt for an attacker to decrypt them without knowing the exact way they were made.
 3. How are unit tests different from integration and end-to-end testing?
+    Unit tests isolate specific functions and methods usually, and are easier to write, but are written to test specific functionality rather than the end to end functionality of an application. That's what integration and end to end testing does
 4. How does _Test Driven Development_ change the way we write applications and tests?
+    Test driven development means writing tests first, a list of demands for what our application will accomplish basically and then building out the application to fulfill those demands. It's a completely different workflow from blindly designing an application and then testing it afterwards, and it adds focus to the functionality and direction of an application. The test is also already there to back our code, so we don't have to worry about it.
