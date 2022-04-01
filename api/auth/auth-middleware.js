@@ -27,7 +27,7 @@ async function checkUsernameExists(req,res,next) {
         next();
     } else if(!req.body.username || !req.body.password) {
         res.status(401).json({
-        message: 'Username and password are required!'
+        message: 'username and password required'
         })
     } else {
         res.status(401).json({

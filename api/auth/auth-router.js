@@ -44,8 +44,8 @@ function generateToken(user) {
     subject: user.id,
     username: user.username,
   };
-
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: '5d' })
+  const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '5d' });
+  return token;
 }
 
 module.exports = router;

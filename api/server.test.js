@@ -46,7 +46,7 @@ describe('server endpoints', () => {
     let res =await request(server)
       .post('/api/auth/login')
       .send({username: 'Josh'});
-    expect(res.body).toMatchObject({ message: 'Username and password are required!'});
+    expect(res.body).toMatchObject({ message: 'username and password required'});
   })
 
   it('[GET] "/" doesn\'t reveal jokes', async () => {
